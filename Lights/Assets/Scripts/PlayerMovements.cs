@@ -8,7 +8,7 @@ public class PlayerMovements : MonoBehaviour
 	public Rigidbody2D playerBody;
 	private float moveInput;
 	public float speed = 10.0f;
-	private bool facingRight = false;
+	public bool facingRight = false;
 	public float jumpForce = 5;
 
 	// Use this for initialization
