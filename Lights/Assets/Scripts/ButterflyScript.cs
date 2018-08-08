@@ -6,6 +6,7 @@ public class ButterflyScript : MonoBehaviour
 {
     public GameObject player;
     public SpiritFollow spiritFollow;
+	public PlayerManager playerManager;
 	// Use this for initialization
 	void Start () 
 	{
@@ -23,6 +24,8 @@ public class ButterflyScript : MonoBehaviour
         if(other.CompareTag("Player"))
         {
             spiritFollow.AddAirSpirit(gameObject, other.gameObject);
+			playerManager = other.gameObject.GetComponent<PlayerManager>();
+			playerManager.butterflyAttack = true;
         }
 	}
 }

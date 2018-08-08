@@ -10,6 +10,7 @@ public class PlayerManager : MonoBehaviour
 	public int AirSpiritCount;
 	public int maxJumps = 1;
 	public int jumpsRemaining;
+	public bool butterflyAttack;
 	// Use this for initialization
 	void Start () 
 	{
@@ -17,6 +18,7 @@ public class PlayerManager : MonoBehaviour
 		GroundSpiritCount = 0;
 		AirSpiritCount = 0;
 		jumpsRemaining = maxJumps;
+		butterflyAttack = false;
 	}
 	
 	// Update is called once per frame
