@@ -5,7 +5,6 @@ using UnityEngine;
 public class TurtleScript : MonoBehaviour
 {
     public GameObject player;
-    public PlayerMovements playerMovements;
     public PlayerManager playerManager;
     public SpiritFollow spiritFollow;
 	// Use this for initialization
@@ -25,6 +24,14 @@ public class TurtleScript : MonoBehaviour
         if(other.CompareTag("Player"))
         {
             spiritFollow.AddGroundSpirit(gameObject, other.gameObject);
+            AddDefense(other.gameObject);
         }
+    }
+
+    void AddDefense(GameObject player)
+    {
+        playerManager = player.GetComponent<PlayerManager>();
+        playerManager.maxHealth += 3;
+        playerManager.health += 3;
     }
 }

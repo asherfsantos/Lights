@@ -5,7 +5,6 @@ using UnityEngine;
 public class ButterflyScript : MonoBehaviour 
 {
     public GameObject player;
-    public PlayerMovements playerMovements;
     public SpiritFollow spiritFollow;
 	// Use this for initialization
 	void Start () 
