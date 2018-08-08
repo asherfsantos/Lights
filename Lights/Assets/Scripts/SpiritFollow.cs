@@ -11,6 +11,8 @@ public class SpiritFollow : MonoBehaviour
 	{
 		playerMovements = player.GetComponent<PlayerMovements>();
 		playerManager = player.GetComponent<PlayerManager>();
+        if(playerMovements.facingRight)
+            Flip();
 		Vector3 newPosition = new Vector3();
         spirit.transform.parent = player.transform;
 		playerManager.AirSpiritCount++;
@@ -32,6 +34,8 @@ public class SpiritFollow : MonoBehaviour
 	{
 		playerMovements = player.GetComponent<PlayerMovements>();
 		playerManager = player.GetComponent<PlayerManager>();
+        if(playerMovements.facingRight)
+            Flip();
 		Vector3 newPosition = new Vector3();
         spirit.transform.parent = player.transform;
 		playerManager.GroundSpiritCount++;
@@ -47,5 +51,12 @@ public class SpiritFollow : MonoBehaviour
         newPosition.y = player.transform.position.y;;
         newPosition.z = player.transform.position.z;
 		transform.position = newPosition;
+	}
+
+    void Flip()
+	{
+		Vector3 Scaler = transform.localScale;
+		Scaler.x *= -1;
+		transform.localScale = Scaler;
 	}
 }
