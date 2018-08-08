@@ -5,7 +5,7 @@ using UnityEngine;
 public class ButterflyScript : MonoBehaviour 
 {
     public GameObject player;
-    public PlayerMovements playerScript;
+    public PlayerMovements playerMovements;
 	// Use this for initialization
 	void Start () 
 	{
@@ -25,10 +25,10 @@ public class ButterflyScript : MonoBehaviour
         if (other.CompareTag("Player"))
 		{
             player = other.gameObject;
-            playerScript = player.GetComponent<PlayerMovements>();
+            playerMovements = player.GetComponent<PlayerMovements>();
 
             transform.parent = other.transform;
-            if (playerScript.facingRight)
+            if (playerMovements.facingRight)
             {
                 newPosition.x = other.transform.position.x - 1.5f;
             }

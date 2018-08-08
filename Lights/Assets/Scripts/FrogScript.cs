@@ -5,7 +5,7 @@ using UnityEngine;
 public class FrogScript : MonoBehaviour
 {
     public GameObject player;
-    public PlayerMovements playerScript;
+    public PlayerMovements playerMovements;
     // Use this for initialization
     void Start()
     {
@@ -25,16 +25,16 @@ public class FrogScript : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             player = other.gameObject;
-            playerScript = player.GetComponent<PlayerMovements>();
+            playerMovements = player.GetComponent<PlayerMovements>();
 
             transform.parent = other.transform;
-            if (playerScript.facingRight)
+            if (playerMovements.facingRight)
             {
-                newPosition.x = other.transform.position.x - 1.5f;
+                newPosition.x = other.transform.position.x - 3.0f;
             }
             else
             {
-                newPosition.x = other.transform.position.x + 1.5f;
+                newPosition.x = other.transform.position.x + 3.0f;
             }
             newPosition.y = other.transform.position.y;
             newPosition.z = other.transform.position.z;
