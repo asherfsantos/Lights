@@ -8,12 +8,15 @@ public class PlayerManager : MonoBehaviour
 	public int maxHealth = 5;
 	public int GroundSpiritCount;
 	public int AirSpiritCount;
+	public int maxJumps = 1;
+	public int jumpsRemaining;
 	// Use this for initialization
 	void Start () 
 	{
 		health = maxHealth;
 		GroundSpiritCount = 0;
 		AirSpiritCount = 0;
+		jumpsRemaining = maxJumps;
 	}
 	
 	// Update is called once per frame
@@ -21,4 +24,10 @@ public class PlayerManager : MonoBehaviour
 	{
 		
 	}
+
+	public void RestoreJumps()
+	{
+		jumpsRemaining = maxJumps;
+	}
+
 }

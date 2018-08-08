@@ -5,6 +5,7 @@ using UnityEngine;
 public class FrogScript : MonoBehaviour
 {
     public GameObject player;
+    public PlayerManager playerManager;
     public SpiritFollow spiritFollow;
     // Use this for initialization
     void Start()
@@ -23,6 +24,14 @@ public class FrogScript : MonoBehaviour
         if(other.CompareTag("Player"))
         {
             spiritFollow.AddGroundSpirit(gameObject, other.gameObject);
+            AddJumps(other.gameObject);
         }
+    }
+
+    void AddJumps(GameObject player)
+    {
+        playerManager = player.GetComponent<PlayerManager>();
+        playerManager.maxJumps++;
+        playerManager.RestoreJumps();
     }
 }

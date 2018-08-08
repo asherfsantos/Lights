@@ -6,6 +6,7 @@ public class PlayerMovements : MonoBehaviour
 {
 	public GameObject player;
 	public Rigidbody2D playerBody;
+	public PlayerManager playerManager;
 	private float moveInput;
 	public float speed = 10.0f;
 	public bool facingRight = false;
@@ -16,6 +17,7 @@ public class PlayerMovements : MonoBehaviour
 	{
 		player = GameObject.FindWithTag("Player");
 		playerBody = player.GetComponent<Rigidbody2D>();
+		playerManager = player.GetComponent<PlayerManager>();
 	}
 	
 	void FixedUpdate () 
@@ -39,9 +41,18 @@ public class PlayerMovements : MonoBehaviour
 
 	private void HandleInput()
 	{
-		if(Input.GetKeyDown(KeyCode.Space))
+		if(Input.GetKeyDown(KeyCode.Space) && (playerManager.jumpsRemaining > 0))
 		{
 			playerBody.velocity = Vector2.up * jumpForce;
+			playerManager.jumpsRemaining--;
+		}
+	}
+
+	void OnCollisionEnter2D(Collision2D collision)
+	{
+		if(collision.gameObject.CompareTag("Ground"))
+		{
+			playerManager.RestoreJumps();
 		}
 	}
 }
