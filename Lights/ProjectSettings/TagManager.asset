@@ -13,6 +13,8 @@ TagManager:
   - Primary Attack
   - Butterfly Attack
   - Enemy Bird
+  - Player Light
+  - Animal Light
   layers:
   - Default
   - TransparentFX
@@ -22,7 +24,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Gameplay
   - 
   - 
   - 
@@ -47,6 +49,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 3317691289
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Animals
+    uniqueID: 4273592209
     locked: 0

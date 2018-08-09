@@ -16,6 +16,7 @@ public class FrogScript : MonoBehaviour
         spiritFollow = GetComponent<SpiritFollow>();
         frogTimer = maxLifetime;
 		followingPlayer = false;
+        GetComponentInChildren<Light>().enabled = false;
     }
 
     // Update is called once per frame

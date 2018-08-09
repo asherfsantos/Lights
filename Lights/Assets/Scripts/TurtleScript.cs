@@ -17,6 +17,7 @@ public class TurtleScript : MonoBehaviour
 		spiritFollow = GetComponent<SpiritFollow>();
         turtleTimer = maxLifetime;
 		followingPlayer = false;
+        GetComponentInChildren<Light>().enabled = false;
 	}
 	
 	// Update is called once per frame

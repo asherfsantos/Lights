@@ -28,6 +28,7 @@ public class SpiritFollow : MonoBehaviour
         newPosition.y = player.transform.position.y + 1.0f;
         newPosition.z = player.transform.position.z;
 		transform.position = newPosition;
+        ActivateSpiritLight(spirit);
 	}
 
 	public void AddGroundSpirit(GameObject spirit, GameObject player)
@@ -51,6 +52,7 @@ public class SpiritFollow : MonoBehaviour
         newPosition.y = player.transform.position.y;;
         newPosition.z = player.transform.position.z;
 		transform.position = newPosition;
+        ActivateSpiritLight(spirit);
 	}
 
     void Flip()
@@ -59,4 +61,9 @@ public class SpiritFollow : MonoBehaviour
 		Scaler.x *= -1;
 		transform.localScale = Scaler;
 	}
+
+    void ActivateSpiritLight(GameObject spirit)
+    {
+        GetComponentInChildren<Light>().enabled = true;
+    }
 }

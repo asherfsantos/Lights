@@ -17,6 +17,7 @@ public class ButterflyScript : MonoBehaviour
 		spiritFollow = GetComponent<SpiritFollow>();
 		butterflyTimer = maxLifetime;
 		followingPlayer = false;
+		GetComponentInChildren<Light>().enabled = false;
 	}
 	
 	// Update is called once per frame
