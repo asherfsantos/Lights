@@ -26,7 +26,7 @@ public class PlayerAttacks : MonoBehaviour
 
 	void HandleInput()
 	{
-		if(Input.GetKeyDown(KeyCode.S))
+		if(Input.GetKeyDown(KeyCode.A))
 		{
 			if(!playerManager.butterflyAttack)
 				UsePrimaryAttack();

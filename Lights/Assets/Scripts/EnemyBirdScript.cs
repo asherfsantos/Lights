@@ -6,7 +6,7 @@ public class EnemyBirdScript : MonoBehaviour
 {
 	public GameObject player;
 	public PlayerManager playerManager;
-	public int maxHealth = 5;
+	public int maxHealth = 2;
 	public int health;
 
 	// Use this for initialization
