@@ -12,6 +12,7 @@ TagManager:
   - Enemy
   - Primary Attack
   - Butterfly Attack
+  - Enemy Bird
   layers:
   - Default
   - TransparentFX

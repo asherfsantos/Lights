@@ -24,12 +24,18 @@ public class PlayerManager : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
-		
+		if(health <= 0)
+			PlayerDies();
 	}
 
 	public void RestoreJumps()
 	{
 		jumpsRemaining = maxJumps;
+	}
+
+	public void PlayerDies()
+	{
+		print("Player Died");
 	}
 
 }

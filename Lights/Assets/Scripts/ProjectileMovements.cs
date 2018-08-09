@@ -7,7 +7,7 @@ public class ProjectileMovements : MonoBehaviour
 	private Transform player;
 	public PlayerMovements playerMovements;
 	private Vector3 target;
-	float speed = 5.0f;
+	float speed = 10.0f;
 	public float projectileDistance = 3.0f;
 	// Use this for initialization
 	void Start () 
@@ -32,8 +32,9 @@ public class ProjectileMovements : MonoBehaviour
 
 	void OnTriggerEnter2D(Collider2D other)
 	{
-		if(other.CompareTag("Enemy"))
+		if(other.CompareTag("Enemy Bird"))
 		{
+			other.GetComponent<EnemyBirdScript>().health--;
 			DestroyProjectile();
 		}
 	}

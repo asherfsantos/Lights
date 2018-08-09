@@ -125,4 +125,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 415f021ab59b4c847b6eefc78d283c04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerMovements: {fileID: 0}
   projectileDistance: 3
