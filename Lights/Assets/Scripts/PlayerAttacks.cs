@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerAttacks : MonoBehaviour 
 {
 	public PlayerManager playerManager;
+	public GameObject primaryAttack;
+	public GameObject butterflyAttack;
 	// Use this for initialization
 	void Start () 
 	{
@@ -35,11 +37,11 @@ public class PlayerAttacks : MonoBehaviour
 
 	void UsePrimaryAttack()
 	{
-		print("Primary Attack");
+		Instantiate(primaryAttack, transform.position, Quaternion.identity);
 	}
 
 	void UseButterflyAttack()
 	{
-		print("Butterfly Attack");
+		Instantiate(butterflyAttack, transform.position, Quaternion.identity);
 	}
 }

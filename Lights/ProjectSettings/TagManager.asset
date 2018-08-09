@@ -8,6 +8,10 @@ TagManager:
   - Frog
   - Turtle
   - Ground
+  - Projectile
+  - Enemy
+  - Primary Attack
+  - Butterfly Attack
   layers:
   - Default
   - TransparentFX
