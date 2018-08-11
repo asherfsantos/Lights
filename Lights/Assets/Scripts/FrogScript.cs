@@ -39,7 +39,7 @@ public class FrogScript : MonoBehaviour
         if(other.CompareTag("Player"))
         {
             playerManager = other.GetComponent<PlayerManager>();
-			Vector3 sliderPosition = new Vector3(-450f + (100f * playerManager.GroundSpiritCount), 240f, 0f);
+			Vector3 sliderPosition = new Vector3(-450f + (100f * playerManager.GroundSpiritCount), 200f, 0f);
             uiCanvas = GameObject.FindWithTag("UI Canvas");
 			currentSlider = Instantiate(frogSlider, sliderPosition, Quaternion.identity);
 			currentSlider.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
