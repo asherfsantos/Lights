@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TurtleScript : MonoBehaviour
 {
@@ -11,6 +12,10 @@ public class TurtleScript : MonoBehaviour
     public float turtleTimer;
 	public float maxLifetime = 15.0f;
 	public bool followingPlayer = false;
+    public GameObject uiCanvas;
+	public Slider turtleSlider;
+	public Slider currentSlider;
+	public bool sliderInstantiated;
 	// Use this for initialization
 	void Start ()
     {
@@ -18,18 +23,28 @@ public class TurtleScript : MonoBehaviour
         turtleTimer = maxLifetime;
 		followingPlayer = false;
         GetComponentInChildren<Light>().enabled = false;
+        sliderInstantiated = false;
 	}
 	
 	// Update is called once per frame
 	void Update ()
     {
 		TurtleTimer();
+        if (followingPlayer && sliderInstantiated)
+			currentSlider.value = turtleTimer/maxLifetime;
 	}
 
     void OnTriggerEnter2D(Collider2D other)
     {
         if(other.CompareTag("Player"))
         {
+            playerManager = other.GetComponent<PlayerManager>();
+			Vector3 sliderPosition = new Vector3(-450f + (100f * playerManager.GroundSpiritCount), 240f, 0f);
+            uiCanvas = GameObject.FindWithTag("UI Canvas");
+			currentSlider = Instantiate(turtleSlider, sliderPosition, Quaternion.identity);
+			currentSlider.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+			currentSlider.transform.SetParent(uiCanvas.transform, false);
+            sliderInstantiated = true;
             spiritFollow.AddGroundSpirit(gameObject, other.gameObject);
             AddDefense(other.gameObject);
             followingPlayer = true;
@@ -38,7 +53,6 @@ public class TurtleScript : MonoBehaviour
 
     void AddDefense(GameObject player)
     {
-        playerManager = player.GetComponent<PlayerManager>();
         playerManager.maxHealth += defenseBuff;
         playerManager.health += defenseBuff;
     }
@@ -62,6 +76,7 @@ public class TurtleScript : MonoBehaviour
 		playerManager.GroundSpiritCount--;
         if(playerManager.health > playerManager.maxHealth)
             playerManager.health = playerManager.maxHealth;
+        Destroy(currentSlider.gameObject);
         Destroy(gameObject);
 	}
 }

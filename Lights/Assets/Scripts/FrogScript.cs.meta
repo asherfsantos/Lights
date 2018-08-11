@@ -3,7 +3,14 @@ guid: 1250f2ae417fb9f4a845fb2fba727fff
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - player: {instanceID: 0}
+  - playerManager: {instanceID: 0}
+  - spiritFollow: {instanceID: 0}
+  - uiCanvas: {instanceID: 0}
+  - frogSlider: {fileID: 114094720158054976, guid: 9e09342fad6f88441b86df97715e990e,
+      type: 2}
+  - currentSlider: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

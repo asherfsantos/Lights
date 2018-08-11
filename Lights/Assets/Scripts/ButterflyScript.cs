@@ -30,7 +30,6 @@ public class ButterflyScript : MonoBehaviour
 	void Update () 
 	{
 		ButterflyTimer();
-		
 		if (followingPlayer && sliderInstantiated)
 			currentSlider.value = butterflyTimer/maxLifetime;
 	}
@@ -42,18 +41,22 @@ public class ButterflyScript : MonoBehaviour
 			if(!sliderInstantiated)
 			{
 				playerManager = other.gameObject.GetComponent<PlayerManager>();
-				sliderInstantiated = true;
-				Vector3 sliderPosition = new Vector3(-400f + (200f * playerManager.AirSpiritCount), 200f, 0f);
-				spiritFollow.AddAirSpirit(gameObject, other.gameObject);
+				Vector3 sliderPosition = new Vector3(-450f + (100f * playerManager.AirSpiritCount), 300f, 0f);
 				uiCanvas = GameObject.FindWithTag("UI Canvas");
 				currentSlider = Instantiate(butterflySlider, sliderPosition, Quaternion.identity);
-				//currentSlider.transform.parent = uiCanvas.transform;
+				currentSlider.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
 				currentSlider.transform.SetParent(uiCanvas.transform, false);
-				//butterflySlider.value = butterflyTimer/maxLifetime;
-				playerManager.butterflyAttack = true;
+				sliderInstantiated = true;
+				spiritFollow.AddAirSpirit(gameObject, other.gameObject);
+				EnableButterflyAttack(other.gameObject);
 				followingPlayer = true;
 			}	
         }
+	}
+
+	void EnableButterflyAttack(GameObject player)
+	{
+		playerManager.butterflyAttack = true;
 	}
 
 	void ButterflyTimer()
@@ -73,7 +76,6 @@ public class ButterflyScript : MonoBehaviour
 	{
 		playerManager.butterflyAttack = false;
 		playerManager.AirSpiritCount--;
-		print("Destroying Slider");
 		Destroy(currentSlider.gameObject);
 		Destroy(gameObject);
 	}
