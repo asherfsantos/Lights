@@ -15,6 +15,10 @@ TagManager:
   - Enemy Bird
   - Player Light
   - Animal Light
+  - UI Canvas
+  - Butterfly Slider
+  - Frog Slider
+  - Turtle Slider
   layers:
   - Default
   - TransparentFX
