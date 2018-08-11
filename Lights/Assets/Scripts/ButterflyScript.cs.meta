@@ -3,7 +3,14 @@ guid: 64cd312c3f8921248a1fd9fc762ba8e2
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - player: {instanceID: 0}
+  - spiritFollow: {instanceID: 0}
+  - playerManager: {instanceID: 0}
+  - uiCanvas: {instanceID: 0}
+  - butterflySlider: {fileID: 114223388353424000, guid: 537db8f9f8672a7488fc1e310cad4dc0,
+      type: 2}
+  - currentSlider: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
