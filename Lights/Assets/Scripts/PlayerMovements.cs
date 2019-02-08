@@ -8,16 +8,17 @@ public class PlayerMovements : MonoBehaviour
 	public Rigidbody2D playerBody;
 	public PlayerManager playerManager;
 	private float moveInput;
-	public float speed = 10.0f;
+	public float speed = 7.0f;
 	public bool facingRight = false;
-	public float jumpForce = 5;
-	public Animator animator;
+	public float jumpForce = 6.5f;
+	//public Animator animator;
 	public float horizontalMove = 0f;
 	// Use this for initialization
 	void Start () 
 	{
 		player = GameObject.FindWithTag("Player");
 		playerBody = player.GetComponent<Rigidbody2D>();
+		playerBody.gravityScale = 1.75f;
 		playerManager = player.GetComponent<PlayerManager>();
 	}
 	
@@ -30,7 +31,7 @@ public class PlayerMovements : MonoBehaviour
 		else if(facingRight && moveInput < 0)
 			Flip();
 		HandleInput();
-		animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
+		//animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
 	}
 
 	void Flip()
