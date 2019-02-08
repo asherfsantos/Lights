@@ -35,8 +35,8 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
+  - Ground_Front
+  - Front
   - 
   - 
   - 
@@ -61,4 +61,7 @@ TagManager:
     locked: 0
   - name: Animals
     uniqueID: 4273592209
+    locked: 0
+  - name: Front
+    uniqueID: 1767203025
     locked: 0
