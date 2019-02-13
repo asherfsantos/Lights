@@ -11,7 +11,7 @@ public class PlayerMovements : MonoBehaviour
 	public float speed = 10.0f;
 	public bool facingRight = false;
 	public float jumpForce = 5;
-	public Animator animator;
+	//public Animator animator;
 	public float horizontalMove = 0f;
 	// Use this for initialization
 	void Start () 
@@ -30,7 +30,7 @@ public class PlayerMovements : MonoBehaviour
 		else if(facingRight && moveInput < 0)
 			Flip();
 		HandleInput();
-		animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
+		//animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
 	}
 
 	void Flip()
