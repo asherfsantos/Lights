@@ -25,7 +25,7 @@ public class SpiritFollow : MonoBehaviour
         {
             newPosition.x = player.transform.position.x + (1.5f * playerManager.AirSpiritCount);
         }
-        newPosition.y = player.transform.position.y + 1.0f;
+        newPosition.y = player.transform.position.y + 1.8f;
         newPosition.z = player.transform.position.z;
 		transform.position = newPosition;
         ActivateSpiritLight(spirit);
@@ -43,13 +43,21 @@ public class SpiritFollow : MonoBehaviour
 
         if (playerMovements.facingRight)
         {
-            newPosition.x = player.transform.position.x - (1.5f * playerManager.GroundSpiritCount);
+            newPosition.x = player.transform.position.x - (1.9f * playerManager.GroundSpiritCount);
         }
         else
         {
-            newPosition.x = player.transform.position.x + (1.5f * playerManager.GroundSpiritCount);
+            newPosition.x = player.transform.position.x + (1.9f * playerManager.GroundSpiritCount);
         }
-        newPosition.y = player.transform.position.y;;
+        if(spirit.CompareTag("Frog"))
+        {
+            newPosition.y = player.transform.position.y - 1.1f;
+        }
+        else if(spirit.CompareTag("Deer"))
+        {
+            newPosition.y = player.transform.position.y;
+        }
+        //newPosition.y = player.transform.position.y;
         newPosition.z = player.transform.position.z;
 		transform.position = newPosition;
         ActivateSpiritLight(spirit);

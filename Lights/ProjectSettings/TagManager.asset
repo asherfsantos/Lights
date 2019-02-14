@@ -19,6 +19,7 @@ TagManager:
   - Butterfly Slider
   - Frog Slider
   - Turtle Slider
+  - Deer
   layers:
   - Default
   - TransparentFX

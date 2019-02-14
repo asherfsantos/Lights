@@ -208,7 +208,7 @@ GameObject:
   - component: {fileID: 200797552}
   m_Layer: 0
   m_Name: Butterfly_1
-  m_TagString: Untagged
+  m_TagString: Butterfly
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -801,7 +801,7 @@ GameObject:
   - component: {fileID: 456577207}
   m_Layer: 0
   m_Name: Deer Change17
-  m_TagString: Untagged
+  m_TagString: Deer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -831,19 +831,30 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 1, y: 1.2}
-      - {x: 0.90000004, y: 1.4}
-      - {x: 0.6, y: 1.5}
-      - {x: -0.5, y: 1.5}
-      - {x: -1.1, y: 1.4}
-      - {x: -1.3000001, y: 0.4}
-      - {x: -1.5, y: -0.1}
-      - {x: -1.5, y: -0.3}
-      - {x: -1.4, y: -1.6}
-      - {x: -1.2, y: -1.7}
-      - {x: 0.3, y: -1.7}
-      - {x: 0.7, y: -1.6}
-      - {x: 1, y: 0.1}
+    - - {x: 0.38215828, y: 0.8660321}
+      - {x: 0.3322544, y: 1.116127}
+      - {x: 0.16404724, y: 1.1949215}
+      - {x: 0.10160065, y: 0.76032734}
+      - {x: -0.21995544, y: 0.6879201}
+      - {x: -0.4186039, y: 1.1994281}
+      - {x: -0.733778, y: 1.1326346}
+      - {x: -0.78696823, y: 0.72342443}
+      - {x: -0.46546173, y: 0.71536493}
+      - {x: -0.49847412, y: 0.43339682}
+      - {x: -0.3812065, y: 0.26736546}
+      - {x: -0.39790344, y: -0.43358755}
+      - {x: -0.390234, y: -1.4958797}
+      - {x: 0.08725357, y: -1.4981446}
+      - {x: 0.08293533, y: -0.7143431}
+      - {x: 0.70469093, y: -0.70840883}
+      - {x: 0.6975441, y: -1.4934258}
+      - {x: 1.0878658, y: -1.498632}
+      - {x: 1.1099243, y: -0.25961637}
+      - {x: 1.1757698, y: -0.10155153}
+      - {x: 1.0400982, y: -0.030248165}
+      - {x: -0.018184662, y: 0.012096405}
+      - {x: 0.009757996, y: 0.5345454}
+      - {x: 0.21517372, y: 0.66774607}
 --- !u!114 &456577208
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1970,7 +1981,7 @@ GameObject:
   - component: {fileID: 1262738235}
   m_Layer: 0
   m_Name: Butterfly_2
-  m_TagString: Untagged
+  m_TagString: Butterfly Attack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2591,8 +2602,8 @@ GameObject:
   - component: {fileID: 1549989725}
   - component: {fileID: 1549989724}
   m_Layer: 0
-  m_Name: frog
-  m_TagString: Untagged
+  m_Name: Frog
+  m_TagString: Frog
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2613,7 +2624,7 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.4846861, y: 0.3928025}
     oldSize: {x: 1.28, y: 1.28}
     newSize: {x: 1.28, y: 1.28}
     adaptiveTilingThreshold: 0.5
@@ -2622,14 +2633,15 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.35999998, y: 0.19999999}
-      - {x: -0.48, y: 0.16}
-      - {x: -0.64, y: -0.16}
-      - {x: -0.64, y: -0.39999998}
-      - {x: -0.35999998, y: -0.59999996}
-      - {x: 0.39999998, y: -0.59999996}
-      - {x: 0.44, y: -0.48}
-      - {x: 0.44, y: -0.04}
+    - - {x: -0.12981176, y: 0.2831564}
+      - {x: -0.35999998, y: 0.19999999}
+      - {x: -0.45228148, y: 0.11149168}
+      - {x: -0.54298353, y: -0.118421555}
+      - {x: -0.39745855, y: -0.15052891}
+      - {x: -0.19368696, y: -0.39210796}
+      - {x: 0.37921095, y: -0.39210796}
+      - {x: 0.40535116, y: -0.3829832}
+      - {x: 0.39149237, y: 0.008508205}
       - {x: 0.16, y: 0.19999999}
 --- !u!114 &1549989725
 MonoBehaviour:
@@ -2739,7 +2751,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1549989723}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.4750395, y: -7.41346, z: 0.296875}
+  m_LocalPosition: {x: 4.65, y: -8, z: 0.296875}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1819663351}
