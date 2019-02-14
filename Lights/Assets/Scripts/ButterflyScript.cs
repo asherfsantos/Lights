@@ -15,6 +15,8 @@ public class ButterflyScript : MonoBehaviour
 	public Slider butterflySlider;
 	public Slider currentSlider;
 	public bool sliderInstantiated;
+	AIMovement AIscript;
+	public bool Capture = false;
 	
 	// Use this for initialization
 	void Start () 
@@ -38,6 +40,9 @@ public class ButterflyScript : MonoBehaviour
 	{
         if(other.CompareTag("Player"))
         {
+			AIscript=GetComponent<AIMovement>();
+			Capture=true;
+
 			if(!sliderInstantiated)
 			{
 				playerManager = other.gameObject.GetComponent<PlayerManager>();

@@ -11,15 +11,19 @@ public class AIMovement : MonoBehaviour
     public Transform [] moveSpot;
     private int randomSpot;
 
+    ButterflyScript Script;
+
     void Start()
     {
         waitTime = startWaitTime;
         randomSpot = Random.Range (0, moveSpot.Length);
+        Script = GetComponentInParent<ButterflyScript>();
     }
 
     
     void Update()
     {
+        if (!Script.Capture){
         transform.position = Vector2.MoveTowards(transform.position, moveSpot[randomSpot].position, speed * Time.deltaTime);
     
         if(Vector2.Distance(transform.position, moveSpot[randomSpot].position) <0.2f)
@@ -32,6 +36,7 @@ public class AIMovement : MonoBehaviour
             {
                 waitTime -= Time.deltaTime;
             }
+        }
         }
     }
 }
