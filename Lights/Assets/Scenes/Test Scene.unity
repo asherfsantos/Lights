@@ -3502,7 +3502,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 329370e2cf7b0da4ea5a57b432627841, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minGroundNormalY: 0.65
+  minGroundNormalY: 1
   gravityModifier: 1
   maxSpeed: 7
   jumpTakeOffSpeed: 7
