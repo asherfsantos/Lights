@@ -43,11 +43,11 @@ public class PlayerMovements : MonoBehaviour
 
 	private void HandleInput()
 	{
-		if(Input.GetKeyDown(KeyCode.Space) && (playerManager.jumpsRemaining > 0))
+		/* if(Input.GetKeyDown(KeyCode.Space) && (playerManager.jumpsRemaining > 0))
 		{
 			playerBody.velocity = Vector2.up * jumpForce;
 			playerManager.jumpsRemaining--;
-		}
+		}*/
 	}
 
 	void OnCollisionEnter2D(Collision2D collision)
